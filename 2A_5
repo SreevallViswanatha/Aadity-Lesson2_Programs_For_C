@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Take two numbers from the user and display the largest.
+int main()
+{
+    int n, n1;
+    printf("Enter a number:");
+    scanf("%d", &n);
+    printf("Enter another number:");
+    scanf("%d", &n1);
+    if(n>n1)
+    {
+        printf("The larger number is %d.", n);
+    }
+    else if(n<n1)
+    {
+        printf("The larger number is %d.", n1);
+    }
+    else if(n==n1)
+    {
+        printf("The numbers are equal.");
+    }
+}
