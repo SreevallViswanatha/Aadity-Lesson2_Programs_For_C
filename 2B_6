@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to accept two values from the user, swap the values without using a third variable and print the values before and after swapping.
+int main()
+{
+    int a, b;
+    printf("Enter the number a:");
+    scanf("%d", &a);
+    printf("Enter the number b:");
+    scanf("%d", &b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("Swapping the numbers, a and b are: %d, %d", a, b);
+}
