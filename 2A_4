@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+//A five-digit number is entered through the keyboard. Write a program to obtain the reversed number and to determine whether the original and reversed numbers are equal or not.
+int main()
+{
+    int n, rn, on, a;
+    printf("Enter a five digit-number:");
+    scanf("%d", &n);
+    on=n;
+    a=n%10;
+    rn=a*10000;
+    n=n/10;
+    a=n%10;
+    rn=rn+a*1000;
+    n=n/10;
+    a=n%10;
+    rn=rn+a*100;
+    n=n/10;
+    a=n%10;
+    rn=rn+a*10;
+    n=n/10;
+    rn=rn+n;
+    printf("The reverse number is:%d\n", rn);
+    if(on==rn)
+    {
+        printf("The number is the same as the reversed number.");
+    }
+    else
+    {
+        printf("The number is not the same as the reversed number.");
+    }
+}
