@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-//Find the absolute value of a number entered through the keyboard.
+//Given the length and breadth of a rectangle, write a program to find whether the area of the rectangle is greater than its perimeter.
+//For Example, the area of the rectangle with length = 5 and breadth = 4 is greater than its perimeter.
 int main()
 {
-    int n;
-    printf("Enter a number:");
-    scanf("%d", &n);
-    if(n>0)
+    int l, b=0, a, p;
+    printf("Enter the length of a rectangle:");
+    scanf("%d", &l);
+    printf("Enter the breadth of a rectangle:");
+    scanf("%d", &b);
+    a=l*b;
+    p=l+b+l+b;
+    if(a<p)
     {
-        printf("The absolute value is %d.", n);
-    }
-    else if(n==0)
-    {
-        printf("The absolute value is 0.");
+        printf("The area is less than the perimeter.");
     }
     else
     {
-        printf("The absolute value is %d.", -n);
+        printf("The area is more than the perimeter.");
     }
 }
