@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Given a, b, c of a quadratic equation ax2+bx+c=0, find the value of x.
+int main()
+{
+    int x1, x2, a, b, c;
+    printf("Given the at the formula for a quadratic equation is ax2+bx+c, enter the following data needed:\n");
+    printf("Enter a:");
+    scanf("%d", &a);
+    printf("Enter b:");
+    scanf("%d", &b);
+    printf("Enter c:");
+    scanf("%d", &c);
+    x1=(-b-sqrt(pow(b, 2)-4*a*c))/2*a;
+    x2=(-b+sqrt(pow(b, 2)-4*a*c))/2*a;
+    if(pow(b, 2)-4*a*c>0)
+    {
+        printf("The solutions are: %d, %d", x1, x2);
+    }
+    if(pow(b, 2)-4*a*c==0)
+    {
+        printf("The solution is: %d", x1);
+    }
+    if(pow(b, 2)-4*a*c<0)
+    {
+        printf("There are no solutions.");
+    }
+}
