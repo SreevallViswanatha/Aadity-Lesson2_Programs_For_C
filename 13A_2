@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+//2Any character is entered through the keyboard, WAP to determine whether the character entered is a uppercase letter, a lowercase letter, a digit or a special symbol.
+//The following table shows the range of ASCII values for various characters:
+//Characters	ASCII Values
+//A - Z	        65 - 90
+//a - z	        97 - 122
+//0 - 9	        48 - 57
+//Special	    0 – 47, 58 – 64, 91 – 96, 123 - 127
+int main()
+{
+    char character;
+    printf("Enter a digit, uppercase letter, lowercase letter, or a special symbol:");
+    scanf("%c", &character);
+    if((character>=65)&&(character<=90))
+    {
+        printf("It is an uppercase letter.");
+    }
+    else if((character>=97)&&(character<=122))
+    {
+        printf("It is a lowercase letter.");
+    }
+    else if((character>=48)&&(character<=57))
+    {
+        printf("It is a digit.");
+    }
+    else
+    {
+        printf("It is a special symbol.");
+    }
+}
