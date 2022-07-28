@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to accept 3 numbers and display the smallest without using logical operators.
+int main()
+{
+    int n, n1, n2;
+    printf("Enter a number:");
+    scanf("%d", &n);
+    printf("Enter another number:");
+    scanf("%d", &n1);
+    printf("Enter another number:");
+    scanf("%d", &n2);
+    if(n<n1)
+    {
+        if(n1<n2)
+        {
+            printf("The smallest number is %d.", n);
+        }
+        else if(n<n2)
+        {
+            printf("The smallest number is %d.", n);
+        }
+        else
+        {
+            printf("The smallest number is %d.", n2);
+        }
+    }
+    else
+    {
+        if(n<n2)
+        {
+            printf("The smallest number is %d.", n1);
+        }
+        else if(n1<n2)
+        {
+            printf("The smallest number is %d.", n1);
+        }
+        else
+        {
+            printf("The smallest number is %d.", n2);
+        }
+    }
+}
