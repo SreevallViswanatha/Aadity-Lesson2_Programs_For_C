@@ -1,39 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-//Write a C program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
+//Write a C program to find the eligibility of admission for a professional course based on the following criteria:
+//Marks in Maths >=65
+//Marks in Phy >=55
+//Marks in Chem>=50
+//Total in all three subject >=180
+//or
+//Total in Math and Physics >=140
 int main()
 {
-    int r, p, c, a, t, pe;
-    char s[1000];
-    printf("Enter the roll number of a student:");
-    scanf("%d", &r);
-    printf("Enter the name of the student:");
-    scanf("%s", s);
-    printf("Enter the marks of the student in physics:");
+    int m, p, c, s;
+    printf("Enter the marks in math:");
+    scanf("%d", &m);
+    printf("Enter the marks in physics:");
     scanf("%d", &p);
-    printf("Enter the marks of the student in chemistry:");
+    printf("Enter the marks in chemistry:");
     scanf("%d", &c);
-    printf("Enter the marks of the student in computer applications:");
-    scanf("%d", &a);
-    t=p+c+a;
-    pe=t/3;
-    printf("The roll number is:%d\n", r);
-    printf("The name of the the student is:%s\n", s);
-    printf("The marks in physics are:%d\n", p);
-    printf("The marks in chemistry are:%d\n", c);
-    printf("The marks in computer applications are:%d\n", a);
-    printf("The total marks are:%d\n", t);
-    printf("The percentage marks are:%d\n", pe);
-    if(pe>80)
+    s=m+p+c;
+    if(((m>=65)&&(p>=55)&&(c>=50)&&(s>=180))||((m+p)>=140))
     {
-        printf("The division is first.");
-    }
-    else if((pe<80)&&(pe>70))
-    {
-        printf("The division is second.");
+        printf("The student is eligible for admission.");
     }
     else
     {
-        printf("The division is third.");
+        printf("The student is not eligible for admission.");
     }
 }
