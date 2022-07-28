@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Write a C program to check whether a character is an alphabet, digit or special character.
+int main()
+{
+    char a;
+    printf("Enter a character:");
+    scanf("%c", &a);
+    if(((a>=65)&&(a<=90))||((a>=97)&&(a<=122)))
+    {
+        printf("The character is an alphabet.");
+    }
+    else if((a>=48)&&(a<=57))
+    {
+        printf("The character is a digit.");
+    }
+    else
+    {
+        printf("The character is a special character.");
+    }
+}
