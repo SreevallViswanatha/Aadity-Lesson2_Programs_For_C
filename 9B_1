@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follows :
+//Unit	Charge/unit
+//upto 199	@1.20
+//200 and above but less than 400	@1.50
+//400 and above but less than 600	@1.80
+//600 and above	@2.00
+//If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+int main()
+{
+    int c, u;
+    float a, s, na;
+    char n[1000];
+    printf("Enter the customer id:");
+    scanf("%d", &c);
+    fflush(stdin);
+    puts("Enter your name:");
+    gets(n);
+    printf("Enter the unit consumed by the user:");
+    scanf("%d", &u);
+    if(u<=199)
+    {
+        a=u*6/5;
+        printf("The name is:%s\n", n);
+        printf("The id is:%d\n", c);
+        printf("The unit is:%d\n",u);
+        printf("The net amount is:%.2f", a);
+    }
+    else if((u>=200)&&(u<400))
+    {
+        a=u*3/2;
+        printf("The name is:%s\n", n);
+        printf("The id is:%d\n", c);
+        printf("The unit is:%d\n",u);
+        printf("The net amount is:%2f", a);
+    }
+    else if((u>=400)&&(u<600))
+    {
+        a=u*9/5;
+        s=a*15/100;
+        na=a+s;
+        printf("The name is:%s\n", n);
+        printf("The id is:%d\n", c);
+        printf("The unit is:%d\n",u);
+        printf("The amount is:%.2f\n", a);
+        printf("The surcharge amount:%.2f\n", s);
+        printf("The net amount is:%.2f\n", na);
+    }
+    else
+    {
+        a=u*2;
+        s=a*15/100;
+        na=a+s;
+        printf("The name is:%s\n", n);
+        printf("The id is:%d\n", c);
+        printf("The unit is:%d\n",u);
+        printf("The amount is:%.2f\n", a);
+        printf("The surcharge amount:%.2f\n", s);
+        printf("The net amount is:%.2f\n", na);
+    }
+}
