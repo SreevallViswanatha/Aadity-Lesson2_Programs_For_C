@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to calculate the salary as per the following table.
+//Gender	Years of Service	Qualifications	Salary
+//Male	    >=10	            Post-Graduate	$15000
+            //>=10	            Graduate	    $10000
+	        //<10	            Post-Graduate	$10000
+	        //<10	            Graduate	    $7000
+//Female	>=10	            Post-Graduate	$12000
+	        //>=10	            Graduate	    $9000
+	        //<10	            Post-Graduate	$10000
+            //<10	            Graduate	    $6000
+int main()
+{
+    int years;
+    char gender, qualifications;
+    printf("Enter the gender(Enter M for male and F for Female):");
+    scanf("%c", &gender);
+    printf("Enter the years of service:");
+    scanf("%d", &years);
+    fflush(stdin);
+    printf("Enter the qualifications(Enter P for Post-Graduate and G for Graduate):");
+    scanf("%c", &qualifications);
+    if(((gender==77)&&(years>=10)&&(qualifications==80)||((gender==109)&&(years>=10)&&(qualifications==80))||((gender==77)&&(years>=10)&&(qualifications==112))||((gender==109)&&(years>=10)&&(qualifications==112))))
+    {
+        printf("The salary is $15000.");
+    }
+    else if(((gender==77)&&(years>=10)&&(qualifications==71)||((gender==109)&&(years>=10)&&(qualifications==71))||((gender==77)&&(years>=10)&&(qualifications==103))||((gender==109)&&(years>=10)&&(qualifications==103))))
+    {
+        printf("The salary is $10000.");
+    }
+    else if(((gender==77)&&(years<10)&&(qualifications==80)||((gender==109)&&(years<10)&&(qualifications==80))||((gender==77)&&(years<10)&&(qualifications==112))||((gender==109)&&(years<10)&&(qualifications==112))))
+    {
+        printf("The salary is $10000.");
+    }
+    else if(((gender==77)&&(years<10)&&(qualifications==71)||((gender==109)&&(years<10)&&(qualifications==71))||((gender==77)&&(years<10)&&(qualifications==103))||((gender==109)&&(years<10)&&(qualifications==103))))
+    {
+        printf("The salary is $7000.");
+    }
+    else if(((gender==70)&&(years>=10)&&(qualifications==80)||((gender==102)&&(years>=10)&&(qualifications==80))||((gender==70)&&(years>=10)&&(qualifications==112))||((gender==102)&&(years>=10)&&(qualifications==112))))
+    {
+        printf("The salary is $12000.");
+    }
+    else if(((gender==70)&&(years>=10)&&(qualifications==71)||((gender==102)&&(years>=10)&&(qualifications==71))||((gender==70)&&(years>=10)&&(qualifications==103))||((gender==102)&&(years>=10)&&(qualifications==103))))
+    {
+        printf("The salary is $9000.");
+    }
+    else if(((gender==70)&&(years<10)&&(qualifications==80)||((gender==102)&&(years<10)&&(qualifications==80))||((gender==70)&&(years<10)&&(qualifications==112))||((gender==102)&&(years<10)&&(qualifications==112))))
+    {
+        printf("The salary is $10000.");
+    }
+    else if(((gender==70)&&(years<10)&&(qualifications==71)||((gender==102)&&(years<10)&&(qualifications==71))||((gender==70)&&(years<10)&&(qualifications==103))||((gender==102)&&(years<10)&&(qualifications==103))))
+    {
+        printf("The salary is $6000.");
+    }
+    else
+    {
+        printf("Wrong inputs.");
+    }
+}
