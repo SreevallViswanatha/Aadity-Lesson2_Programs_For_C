@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Write a program in C to accept a grade and declare the equivalent description :
+//Grade	Description
+//E	Excellent
+//V	Very Good
+//G	Good
+//A	Average
+//F	Fail
+
+int main()
+{
+    char grade;
+    printf("Enter the grades E, V, G, A, or F:");
+    scanf("%c", &grade);
+    if(grade==69)
+    {
+        printf("Grade:Excellent");
+    }
+    else if(grade==86)
+    {
+        printf("Grade:Very Good");
+    }
+    else if(grade==71)
+    {
+        printf("Grade:Good");
+    }
+    else if(grade==65)
+    {
+        printf("Grade:Average");
+    }
+    else if(grade==70)
+    {
+        printf("Grade:Fail");
+    }
+}
