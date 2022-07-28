@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+//The Marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules:
+//a.	Percentage above or equal to 60 – First division
+//b.	Percentage between 50 and 59 – Second division
+//c.	Percentage between 40 and 49 – Third division
+//d.	Percentage less than 40 – fail.
+//WAP to calculate the division obtained by the student without logical operator.
+int main()
+{
+    int marks_1, marks_2, marks_3, marks_4, marks_5;
+    float percentage;
+    printf("Enter the marks in one subject:");
+    scanf("%d", &marks_1);
+    printf("Enter the marks in another subject:");
+    scanf("%d", &marks_2);
+    printf("Enter the marks in another subject:");
+    scanf("%d", &marks_3);
+    printf("Enter the marks in another subject:");
+    scanf("%d", &marks_4);
+    printf("Enter the marks in another subject:");
+    scanf("%d", &marks_5);
+    percentage=(marks_1+marks_2+marks_3+marks_4+marks_5)/5;
+    if(percentage>=60)
+    {
+        printf("First Division");
+    }
+    else if((percentage>=50)&&(percentage<=59))
+    {
+        printf("Second Division");
+    }
+    else if((percentage>=40)&&(percentage<=49))
+    {
+        printf("Third Division");
+    }
+    else
+    {
+        printf("Fourth Division");
+    }
+}
