@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to accept price and quantity and display Amount, Discount, Tax and Net amount:
+//Give a discount of 10% for quantity less than 5, if the quantity is more than 5 give 20% discount. Give further discount of 5% if the amount crosses $1000.
+int main()
+{
+    int p, q, d1, d2, t, na, d;
+    printf("Enter the price of how much you bought:");
+    scanf("%d", &p);
+    printf("Enter the quantity of how much you bought:");
+    scanf("%d", &q);
+    t=p*3/50;
+    if(q<5&&p>1000)
+    {
+        d1=1/10*p;
+        d2=d1*1/20;
+        d=d1+d2;
+        na=p+t-d;
+        printf("The amount is:%d. The discount is:%d. The tax is:%d. The net amount is:%d.", p, d, t, na);
+    }
+    else if(q<5)
+    {
+        d1=1/10*p;
+        d=d1;
+        na=p+t-d;
+        printf("The amount is:%d. The discount is:%d. The tax is:%d. The net amount is:%d.", p, d, t, na);
+    }
+    else if(q>5&&p>1000)
+    {
+        d1=1/5*p;
+        d2=d1*1/20;
+        d=d1+d2;
+        na=p+t-d;
+        printf("The amount is:%d. The discount is:%d. The tax is:%d. The net amount is:%d.", p, d, t, na);
+    }
+    else if(q>5)
+    {
+        d1=p*1/5;
+        d=d1;
+        na=p+t-d;
+        printf("The amount is:%d. The discount is:%d. The tax is:%d. The net amount is:%d.", p, d, t, na);
+    }
+    else if(q>5)
+    {
+        d1=1/5*p;
+        d=d1;
+        na=p+t-d;
+       printf("The amount is:%d. The discount is:%d. The tax is:%d. The net amount is:%d.", p, d, t, na);
+    }
+}
