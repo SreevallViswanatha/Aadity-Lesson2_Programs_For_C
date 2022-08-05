@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+//If the three sides of a triangle are entered through the keyboard, write a program to check whether the triangle is valid or not. The triangle is valid if the sum of two sides is greater than the largest of the three sides.
+int main()
+{
+    int a, b, c;
+    printf("Enter a length of a triangle:");
+    scanf("%d", &a);
+    printf("Enter another length of the triangle:");
+    scanf("%d", &b);
+    printf("Enter the length of the triangle:");
+    scanf("%d", &c);
+    if((a>b)&&(b>c))
+    {
+    if((b+c)>a)
+      {
+        printf("The triangle is valid.");
+      }
+    else
+     {
+        printf("The triangle is not valid.");
+     }
+    }
+    else if((b>a)&&(a>c))
+    {
+    if((a+c)>b)
+      {
+        printf("The triangle is valid.");
+      }
+    else
+     {
+        printf("The triangle is not valid.");
+     }
+    }
+    else
+    {
+    if((a+b)>c)
+      {
+        printf("The triangle is valid.");
+      }
+    else
+     {
+        printf("The triangle is not valid.");
+     }
+    }
+}
