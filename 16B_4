@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//WAP to receive value of an angle in degrees and check whether sum of squares of sine and cosine of this angle is equal to 1.
+int main()
+{
+    int angle;
+    printf("Enter an angle in degrees:");
+    scanf("%d", &angle);
+    if((sin(angle)*sin(angle)+cos(angle)*cos(angle)))
+        {
+            printf("The square of sin of the angle plus the square of cos of the angle is equal to one.");
+        }
+        else
+        {
+            printf("The square of sin of the angle plus the square of cos of the angle is not equal to one.");
+        }
+}
