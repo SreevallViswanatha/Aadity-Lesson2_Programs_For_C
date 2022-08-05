@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+//In a company an employee is paid as under: If his basic salary is less than $ 7500, then HRA = 10% of basic salary and DA = 90% of basic salary.
+//If his salary is either equal to or above $7500, then HRA is $1000 and DA is 98% of basic salary.
+//If the employee's salary is input through the keyboard write a program to find his gross salary.
+int main()
+{
+    float salary, gross_salary;
+    printf("Enter the salary of an employee:");
+    scanf("%f", &salary);
+    gross_salary=(salary<7500)?salary-0.8*salary:salary+1000-0.98*salary;
+    printf("The total salary is:%.2f", gross_salary);
+}
