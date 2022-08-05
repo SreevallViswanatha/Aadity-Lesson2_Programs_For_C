@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to receive salary. if the salary is between 25000 and 40000 – manager. If the sal is between 15000 and 25000 – accountant. If the salary is less than 15000 – Clerk. Use conditional operators.
+int main()
+{
+   int salary;
+   printf("Enter the salary of a person:");
+   scanf("%d", &salary);
+   if((salary>=25000)&&(salary<=40000))
+   {
+       printf("The person is a manager.");
+   }
+   else if((salary>=15000)&&(salary<25000))
+   {
+       printf("The person is a accountant.");
+   }
+   else if(salary<15000)
+   {
+       printf("The person is a clerk.");
+   }
+   else
+   {
+       printf("Please enter a salary that is less than or equal to 40000.");
+   }
+}
