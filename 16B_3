@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to find the greatest of the three numbers entered through the keyboard. Use conditional operators.
+int main()
+{
+    int n, n1, n2;
+    printf("Enter a number:");
+    scanf("%d", &n);
+    printf("Enter another number:");
+    scanf("%d", &n1);
+    printf("Enter another number:");
+    scanf("%d", &n2);
+    if(((n<n1)&&(n1<n2))||((n1<n)&&(n<n2)))
+    {
+        printf("The greatest number is %d.", n2);
+    }
+    else if(((n<n2)&&(n2<n1))||((n2<n)&&(n<n1)))
+    {
+        printf("The greatest number is %d.", n1);
+    }
+    else
+    {
+        printf("The greatest number is %d.", n);
+    }
+}
