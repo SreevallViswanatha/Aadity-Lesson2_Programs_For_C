@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to accept the current year and the year in which the employee joined the organization.
+//If the number of years for which the employee has served the organization is greater than 3, then a bonus of $2500 is given to the employee.
+//If the years of service are not greater than 3, then print bonus is 0.
+int main()
+{
+    int current_year, year, number_of_years, salary, current_salary;
+    printf("Enter how much is the salary of the employee is:");
+    scanf("%d", &current_salary);
+    printf("Enter the year in which the employee joined the organization:");
+    scanf("%d", &year);
+    printf("Enter the current year:");
+    scanf("%d", &current_year);
+    number_of_years=current_year-year;
+    salary=(number_of_years>3)?current_salary+2500:current_salary;
+    printf("The salary of the employee is:%d", salary);
+}
