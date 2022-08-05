@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+//In boxing the weight class of a boxer is decided as per the following table. Write a program that receives weight as input and prints out the boxer’s weight class.
+//Boxer Class	Weight in Pounds
+//Flyweight	    <115
+//Bantamweight	115 - 121
+//Featherweight	122 - 153
+//Middleweight	154 - 189
+//Heavyweight	>=190
+int main()
+{
+   int pounds;
+   printf("Enter the number of pounds a person is:");
+   scanf("%d", &pounds);
+   if(pounds<115)
+   {
+       printf("The person is flyweight.");
+   }
+   else if((pounds>=115)&&(pounds<=121))
+   {
+       printf("The person is bantamweight.");
+   }
+   else if((pounds>=122)&&(pounds<=153))
+   {
+       printf("The person is featherweight.");
+   }
+   else if((pounds>=154)&&(pounds<=189))
+   {
+       printf("The person is middleweight.");
+   }
+   else
+   {
+       printf("The person is heavyweight.");
+   }
+}
