@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Given the length and breadth of a rectangle, write a program to find whether the area of the rectangle is greater than its perimeter.
+//For Example, the area of the rectangle with length = 5 and breadth = 4 is greater than its perimeter.
+int main()
+{
+    int length, breadth;
+    printf("Enter the length of a rectangle:");
+    scanf("%d", &length);
+    printf("Enter the breadth of a rectangle:");
+    scanf("%d", &breadth);
+    ((2*length+2*breadth)>(length*breadth))?printf("The perimeter is greater than the area."):((2*length+2*breadth)<(length*breadth))?printf("The perimeter is less than the area."):printf("The perimeter is equal to the area.");
+}
