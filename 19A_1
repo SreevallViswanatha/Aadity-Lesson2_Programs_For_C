@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Find the absolute value of a number entered through the keyboard and if the input is not valid print invalid input.
+int main()
+{
+    int number;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    (number>0)?printf("The absolute value is %d.", number):(number<0)?printf("The absolute value is %d.", -number):printf("The absolute value is 0.");
+}
