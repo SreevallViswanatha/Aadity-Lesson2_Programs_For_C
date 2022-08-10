@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//If the ages of Ram, Shyam and Ajay are input through the keyboard, WAP to determine the youngest of the three. Display the name and the age.
+int main()
+{
+    int Ram, Shyam, Ajay;
+    printf("Enter the age of Ram:");
+    scanf("%d", &Ram);
+    printf("Enter the age of Shyam:");
+    scanf("%d", &Shyam);
+    printf("Enter the age of Ajay:");
+    scanf("%d", &Ajay);
+    (((Ajay<Ram)&&(Ram<Shyam))||((Ajay<Shyam)&&(Shyam<Ram)))?printf("The smallest person is Ajay and the the age is %d.", Ajay):(((Ram<Ajay)&&(Ajay<Shyam))||((Ram<Shyam)&&(Shyam<Ajay)))?printf("The smallest person is Ram and the age is %d.", Ram):printf("The smallest person is Shyam and the age is %d.", Shyam);
+}
